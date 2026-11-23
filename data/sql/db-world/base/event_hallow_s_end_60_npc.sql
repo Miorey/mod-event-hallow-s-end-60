@@ -8,9 +8,11 @@ update creature_template set creature_template.minlevel = 62, creature_template.
 
 
 -- Loot:
-UPDATE creature_loot_template SET item = 60001 WHERE entry = 23682 AND item = 49126;
-UPDATE creature_loot_template SET item = 60002 WHERE entry = 23682 AND item = 49128;
-UPDATE creature_loot_template SET item = 60003 WHERE entry = 23682 AND item = 49121;
-UPDATE creature_loot_template SET item = 60004 WHERE entry = 23682 AND item = 49123;
-UPDATE creature_loot_template SET item = 60005 WHERE entry = 23682 AND item = 49124;
-DELETE FROM creature_loot_template WHERE entry = 23682 AND item = 33154;
+-- Rings drop from the Headless Horseman himself
+UPDATE creature_loot_template SET item = 60003 WHERE entry = 23682 AND item = 49123;
+UPDATE creature_loot_template SET item = 60004 WHERE entry = 23682 AND item = 49124;
+UPDATE creature_loot_template SET item = 60005 WHERE entry = 23682 AND item = 49121;
+-- Blade, helm and Sinister Squashling come from the LFG reward bag (Loot-Filled Pumpkin)
+UPDATE item_loot_template SET item = 60001 WHERE entry = 54516 AND item = 49128;
+UPDATE item_loot_template SET item = 60002 WHERE entry = 54516 AND item = 49126;
+DELETE FROM item_loot_template WHERE entry = 54516 AND item = 33154;
